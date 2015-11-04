@@ -19,14 +19,17 @@
               LastKnownName="INotifyPropertyChanged"
               LastKnownLocation="Common.Modeling.uml" />
           </interfaceRealization>
-          <interfaceRealization
-            Id="25dad3d6-21fc-4b80-9874-9a8070f36990">
-            <interfaceMoniker
-              Id="6e0da6a7-eed4-4005-b428-dffe55a27a73"
-              LastKnownName="INotifyPropertyChanged"
-              LastKnownLocation="Package_0059.uml" />
-          </interfaceRealization>
         </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="9a05be56-07e2-4f63-98f2-f4e6ea688045"
+            isSubstitutable="false">
+            <classMoniker
+              Id="b7f02998-2b77-45b1-8bb9-66e29d3c3f12"
+              LastKnownName="ObservableViewModel"
+              LastKnownLocation="Package_0054.uml" />
+          </generalization>
+        </generalsInternal>
         <ownedAttributesInternal>
           <property
             Id="c30fb975-264f-4c65-b45f-73c5cb3d0484"
@@ -84,24 +87,6 @@
           </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
-          <operation
-            Id="c90f5f1d-2b55-42d6-ab69-beaf91b13135"
-            name="OnPropertyChanged"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="de923a01-d39f-4c42-9617-7df09dc4bc8f"
-                  name="String property"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
           <operation
             Id="6e153d41-c21c-4e75-95ec-438b65795d53"
             name="BaseViewModel"
@@ -285,6 +270,16 @@
         isAbstract="true"
         isLeaf="false"
         isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="44644786-e344-4c75-9c9f-7d8a0fdbcdac"
+            isSubstitutable="false">
+            <classMoniker
+              Id="5c3a9c08-73fe-4b45-8957-25d86ed4743b"
+              LastKnownName="BaseViewModel"
+              LastKnownLocation="Package_0054.uml" />
+          </generalization>
+        </generalsInternal>
         <ownedAttributesInternal>
           <property
             Id="5be85ec2-a66b-4897-8c97-1ede1f014ce7"
@@ -386,6 +381,44 @@
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="b7f02998-2b77-45b1-8bb9-66e29d3c3f12"
+        name="ObservableViewModel"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="4abd3bdd-041a-45c1-be3e-8ee526e41ffa">
+            <interfaceMoniker
+              Id="6e0da6a7-eed4-4005-b428-dffe55a27a73"
+              LastKnownName="INotifyPropertyChanged"
+              LastKnownLocation="Package_0059.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="c8b35a22-9106-49dc-a647-d04bcabd484f"
+            name="OnPropertyChanged"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6074fb6b-2ec2-4771-b5c3-57e35b6825b0"
+                  name="String property"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>

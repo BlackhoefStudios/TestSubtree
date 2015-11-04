@@ -38,12 +38,12 @@
           <packageHasNamedElement>
             <class Id="48454939-2842-4554-8ee2-224dbf554b11" name="BaseViewModel" isAbstract="true" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="5c3a9c08-73fe-4b45-8957-25d86ed4743b" />
-              <suppliersInternal>
-                <interfaceRealization Id="86472140-63e5-43e1-a4f5-5a640ebb177d">
-                  <interfaceMoniker Id="7a3d7e01-5671-4986-9ca0-65d36bda53a7" LastKnownName="INotifyPropertyChanged" />
-                  <elementDefinition Id="25dad3d6-21fc-4b80-9874-9a8070f36990" />
-                </interfaceRealization>
-              </suppliersInternal>
+              <generalsInternal>
+                <generalization Id="70e2f205-cc30-41ce-901c-362d589c5763" isSubstitutable="false">
+                  <classMoniker Id="8cf8a655-7a0a-4730-9cb9-08fee88e76cf" LastKnownName="ObservableViewModel" />
+                  <elementDefinition Id="9a05be56-07e2-4f63-98f2-f4e6ea688045" />
+                </generalization>
+              </generalsInternal>
               <ownedAttributesInternal>
                 <property Id="5500495c-106e-425e-8f9d-8f02d5f0b938" name="IsBusy" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="c30fb975-264f-4c65-b45f-73c5cb3d0484" />
@@ -65,16 +65,6 @@
                 </property>
               </ownedAttributesInternal>
               <ownedOperationsInternal>
-                <operation Id="46e6b318-c6e8-4267-b35c-a8cc6745b215" name="OnPropertyChanged" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <elementDefinition Id="c90f5f1d-2b55-42d6-ab69-beaf91b13135" />
-                  <ownedParameters>
-                    <operationHasOwnedParameters>
-                      <parameter Id="0548f813-33e3-4b85-bdfb-3141219565b2" name="String property" direction="In" isUnique="false">
-                        <elementDefinition Id="de923a01-d39f-4c42-9617-7df09dc4bc8f" />
-                      </parameter>
-                    </operationHasOwnedParameters>
-                  </ownedParameters>
-                </operation>
                 <operation Id="c3badb88-33d4-4bf8-bea2-20f977b10e44" name="BaseViewModel" visibility="Protected" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="6e153d41-c21c-4e75-95ec-438b65795d53" />
                   <ownedParameters>
@@ -171,6 +161,12 @@
           <packageHasNamedElement>
             <class Id="dcb97419-5015-437c-ac39-b2d36d9266a4" name="BaseListItemViewModel" isAbstract="true" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="d02d97ee-52a2-48e8-968d-230a4f74e062" />
+              <generalsInternal>
+                <generalization Id="deed19b5-396c-4c0e-a734-aa474730622d" isSubstitutable="false">
+                  <classMoniker Id="48454939-2842-4554-8ee2-224dbf554b11" LastKnownName="BaseViewModel" />
+                  <elementDefinition Id="44644786-e344-4c75-9c9f-7d8a0fdbcdac" />
+                </generalization>
+              </generalsInternal>
               <ownedAttributesInternal>
                 <property Id="a708913e-3705-4d38-b7b7-b704808b7422" name="Delete" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="5be85ec2-a66b-4897-8c97-1ede1f014ce7" />
@@ -206,6 +202,29 @@
               <ownedOperationsInternal>
                 <operation Id="550b4535-8dde-4196-848b-fb3ad5452ae1" name="BaseListItemViewModel" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="56b71a97-414c-44e5-ba40-ea03906eb722" />
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="8cf8a655-7a0a-4730-9cb9-08fee88e76cf" name="ObservableViewModel" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="b7f02998-2b77-45b1-8bb9-66e29d3c3f12" />
+              <suppliersInternal>
+                <interfaceRealization Id="a4169a12-cc14-4ec5-897c-c919f2df8375">
+                  <interfaceMoniker Id="7a3d7e01-5671-4986-9ca0-65d36bda53a7" LastKnownName="INotifyPropertyChanged" />
+                  <elementDefinition Id="4abd3bdd-041a-45c1-be3e-8ee526e41ffa" />
+                </interfaceRealization>
+              </suppliersInternal>
+              <ownedOperationsInternal>
+                <operation Id="f1a1f19f-66a8-4c04-abd6-56405f2e22ac" name="OnPropertyChanged" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="c8b35a22-9106-49dc-a647-d04bcabd484f" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="8b6b0b6b-ec24-4e7e-94ae-59fa47888a50" name="String property" direction="In" isUnique="false">
+                        <elementDefinition Id="6074fb6b-2ec2-4771-b5c3-57e35b6825b0" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
                 </operation>
               </ownedOperationsInternal>
             </class>
