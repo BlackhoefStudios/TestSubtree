@@ -1,0 +1,3 @@
+[submodule "common"]
+    path = BlackhoefStudios.Common
+    url = git://github.com/BlackhoefStudios/BlackhoefStudios.Common.git
